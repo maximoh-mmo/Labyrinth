@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1564044ded60485e9ade9c5199f14278, type: 3}
+  m_Name: Straight
+  m_EditorClassIdentifier: Assembly-CSharp::Tiles.TileType
+  displayName: Straight
+  baseConnections: 5
+  prefabVisualisation: {fileID: 2810382994655174850, guid: 7f174644053908848a4d41c62162a718, type: 3}
