@@ -27,7 +27,7 @@ Each development phase corresponds to a post in the **blog series**, with code a
 | Phase | Blog Post | Description |
 |-------|------------|-------------|
 | **1** | [Designing a Dynamic Maze Tile System in Unity](#) | Tile data model, rotations, and grid visualization |
-| **2** | *(Coming Soon)* Building the Living Labyrinth Grid | Shifting rows and handling the spare tile |
+| **2** | [Building the Living Labyrinth Grid](#) | Shifting rows and handling the spare tile |
 | **3** | *(Planned)* Procedural Maze Generation | Creating valid, random labyrinth layouts |
 | **4** | *(Planned)* Pathfinding & Player Movement | Navigating the shifting maze |
 | **5** | *(Planned)* Expansions | Items, objectives, and advanced procedural rules |
@@ -49,6 +49,28 @@ Implemented:
 
 ✅ Displays a fully randomized 7×7 grid of rotating tiles on Play. Use Spacebar to regenerate a new random grid.
 
+**Phase 2 - Shifting Rows**
+
+Implemented:
+
+- Randomly generated grid of tiles (`Straight`, `Bend`, `T-junction`)  
+- Spare tile ready for insertion  
+- Tile insertion from edges, with proper shifting of rows/columns  
+- Prevention of direct reverse moves (game rule enforcement)  
+- Smooth animation of tiles using a single coroutine  
+- Basic keyboard controls:  
+  - `W` → Shift column up  
+  - `S` → Shift column down  
+  - `A` → Shift row left  
+  - `D` → Shift row right  
+- Inspector-friendly grid rebuild using `[ContextMenu("Rebuild Grid")]`  
+
+**Technical Notes:**
+
+- `GridPosition` struct used for clean, immutable coordinate handling  
+- `_animationCoroutine` ensures smooth movement and prevents overlapping animations  
+- `_spareTile` is handled as a dynamic part of the grid logic  
+- Input system uses Unity’s **InputAction** bindings for flexibility  
 
 ---
 
