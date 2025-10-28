@@ -1,7 +1,6 @@
-﻿using UnityEngine;
-
-namespace Tiles
+﻿namespace Tiles
 {
+    using UnityEngine;
     public class Tile : MonoBehaviour
     {
         public TileType type;

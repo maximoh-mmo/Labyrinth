@@ -1,8 +1,6 @@
-﻿using System;
-
-namespace Tiles
+﻿namespace Tiles
 {
-    [Flags]
+    [System.Flags]
     public enum TileConnection
     {
         None = 0,

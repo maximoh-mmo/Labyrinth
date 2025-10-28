@@ -1,8 +1,6 @@
-﻿using UnityEngine;
-
-namespace Tiles
+﻿namespace Tiles
 {
-    
+    using UnityEngine;
     [CreateAssetMenu(menuName = "Labyrinth/TileType")]
     public class TileType : ScriptableObject
     {

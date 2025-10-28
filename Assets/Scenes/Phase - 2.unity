@@ -441,31 +441,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1139538375}
-  - component: {fileID: 1139538374}
+  - component: {fileID: 1139538376}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1139538374
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1139538373}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af708053ebc64abc846b05088520eb4a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Tiles.TileGridTest
-  gridSize: 7
-  tileTypes:
-  - {fileID: 11400000, guid: 2db21021be4802e4fbc645ba2d97eb7e, type: 2}
-  - {fileID: 11400000, guid: 637d76160a794b545ad4e80fb2a687fc, type: 2}
-  - {fileID: 11400000, guid: 05e16fbf17faf9041b78b0b29878dc77, type: 2}
 --- !u!4 &1139538375
 Transform:
   m_ObjectHideFlags: 0
@@ -481,6 +464,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1139538376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1139538373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 791672425be4474aa5cc0a14ae45c797, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Grid.Grid
+  gridSize: 7
+  tileTypes:
+  - {fileID: 11400000, guid: 2db21021be4802e4fbc645ba2d97eb7e, type: 2}
+  - {fileID: 11400000, guid: 637d76160a794b545ad4e80fb2a687fc, type: 2}
+  - {fileID: 11400000, guid: 05e16fbf17faf9041b78b0b29878dc77, type: 2}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
