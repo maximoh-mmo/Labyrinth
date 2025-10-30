@@ -143,10 +143,10 @@ namespace Grid
         {
             {
                 if (_shiftUp != null && _shiftUp.WasPerformedThisFrame())
-                    InsertTile(new GridPosition(3, 0));
+                    InsertTile(new GridPosition(3, gridSize - 1));
 
                 if (_shiftDown != null && _shiftDown.WasPerformedThisFrame())
-                    InsertTile(new GridPosition(3, gridSize - 1));
+                    InsertTile(new GridPosition(3, 0));
 
                 if (_shiftLeft != null && _shiftLeft.WasPerformedThisFrame())
                     InsertTile(new GridPosition(0, 3));
