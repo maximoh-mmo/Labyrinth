@@ -114,6 +114,18 @@ namespace Grid
                 }
             }
 
+            _tiles = LabyrinthGenerator.Generate(
+                gridSize,
+                tileTypes,
+                transform,
+                type =>
+                {
+                    var tile = Instantiate(type.prefabVisualisation).GetComponent<Tile>();
+                    return tile;
+                });
+
+            /*
+             Previous Random Tile Generation
             _tiles = new Tile[gridSize, gridSize];
             
             for (var x = 0; x < gridSize; x++)
@@ -123,6 +135,7 @@ namespace Grid
                     _tiles[x, y] = RandomTile(x, y);
                 }
             }
+            */
             _spareTile = RandomTile(gridSize + 1, 0);
         }
 
