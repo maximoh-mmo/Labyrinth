@@ -114,10 +114,9 @@ namespace Grid
                 }
             }
 
-            _tiles = LabyrinthGenerator.Generate(
+            _tiles = LabyrinthGeneratorAPI.Generate(
                 gridSize,
                 tileTypes,
-                transform,
                 type =>
                 {
                     var tile = Instantiate(type.prefabVisualisation).GetComponent<Tile>();

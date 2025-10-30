@@ -48,37 +48,33 @@
 
             return dir;
         }
+        
+        public TileConnection GetRotatedConnections()
+        {
+            int rotated = ((int)type.baseConnections << rotationSteps) & 0b1111;
+            rotated |= ((int)type.baseConnections >> (4 - rotationSteps)) & 0b1111;
+            return (TileConnection)rotated;
+        }
+        
 #if UNITY_EDITOR
         private void OnDrawGizmos()
         {
             if (type == null) return;
 
             Gizmos.color = Color.green;
-            Gizmos.DrawWireCube(transform.position, Vector3.one * 0.9f);
+            float size = 0.4f;
+            var pos = transform.position;
 
-            float arrowLength = 0.3f;
+            var conns = GetRotatedConnections(); // Use rotated directions
 
-            // Iterate through all possible directions
-            foreach (TileConnection dir in System.Enum.GetValues(typeof(TileConnection)))
-            {
-                if (dir == TileConnection.None) continue;
-                if (!HasConnection(dir)) continue;
-
-                // Convert logical direction into a vector
-                Vector3 localDir = dir switch
-                {
-                    TileConnection.Up => Vector3.up,
-                    TileConnection.Right => Vector3.right,
-                    TileConnection.Down => Vector3.down,
-                    TileConnection.Left => Vector3.left,
-                    _ => Vector3.zero
-                };
-
-                // Apply the tile's current rotation
-                Vector3 worldDir = transform.rotation * localDir;
-
-                Gizmos.DrawLine(transform.position, transform.position + worldDir * arrowLength);
-            }
+            if (conns.HasFlag(TileConnection.Up))
+                Gizmos.DrawLine(pos, pos + Vector3.up * size);
+            if (conns.HasFlag(TileConnection.Right))
+                Gizmos.DrawLine(pos, pos + Vector3.right * size);
+            if (conns.HasFlag(TileConnection.Down))
+                Gizmos.DrawLine(pos, pos + Vector3.down * size);
+            if (conns.HasFlag(TileConnection.Left))
+                Gizmos.DrawLine(pos, pos + Vector3.left * size);
         }
 #endif
     }
