@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Tiles.TileType
   displayName: Straight
   baseConnections: 5
-  prefabVisualisation: {fileID: 2810382994655174850, guid: 7f174644053908848a4d41c62162a718, type: 3}
+  prefabVisualisation: {fileID: 2810382994655174850, guid: aa3f6bf0723b77f4c81434a81d7251e2, type: 3}
