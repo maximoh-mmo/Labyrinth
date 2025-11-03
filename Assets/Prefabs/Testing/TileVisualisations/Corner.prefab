@@ -125,5 +125,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8b106ac98294b87b114ff73dd8543b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Tiles.Tile
-  type: {fileID: 0}
+  type: {fileID: 11400000, guid: 2db21021be4802e4fbc645ba2d97eb7e, type: 2}
   rotationSteps: 0

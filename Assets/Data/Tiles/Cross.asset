@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1564044ded60485e9ade9c5199f14278, type: 3}
-  m_Name: Corner
+  m_Name: Cross
   m_EditorClassIdentifier: Assembly-CSharp::Tiles.TileType
-  displayName: Corner
-  baseConnections: 9
-  prefabVisualisation: {fileID: 2810382994655174850, guid: 7f174644053908848a4d41c62162a718, type: 3}
+  displayName: Cross
+  baseConnections: -1
+  prefabVisualisation: {fileID: 2810382994655174850, guid: a139d8a3527e04641be92ab6c8f0182e, type: 3}

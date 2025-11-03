@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 69252601572775539}
   - component: {fileID: 872471984101437841}
   - component: {fileID: 1177943801512136211}
-  - component: {fileID: 5652185444305804831}
+  - component: {fileID: -3916916195482825764}
   m_Layer: 0
-  m_Name: Junction
+  m_Name: DeadEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -68,7 +68,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7cbd2feba85f1e946b6b23da1718ec1e, type: 2}
+  - {fileID: 2100000, guid: 0e5c4e2cff500b34f888a2a1bd01c5a8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -113,7 +113,7 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &5652185444305804831
+--- !u!114 &-3916916195482825764
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -125,5 +125,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8b106ac98294b87b114ff73dd8543b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Tiles.Tile
-  type: {fileID: 11400000, guid: 05e16fbf17faf9041b78b0b29878dc77, type: 2}
+  type: {fileID: 11400000, guid: 9363ae14acea1bb45a812a536f18ac42, type: 2}
   rotationSteps: 0
