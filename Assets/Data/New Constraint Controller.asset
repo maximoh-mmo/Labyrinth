@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d200c4123b73402ea86603714f7728ef, type: 3}
+  m_Name: New Constraint Controller
+  m_EditorClassIdentifier: Assembly-CSharp::Maze.ConstraintController
+  constraints:
+  - name: ConnectionConstraint
+    enabled: 1
+    status: 2
+    message: Constraint failed validation.
+    details:
+    - "Tile (2,3) conflicts with rotation 90\xB0."
+    - Expected open edge to North, but got South.

@@ -1,11 +1,12 @@
-﻿namespace Tiles
+﻿using UnityEngine;
+
+namespace Maze.Tiles
 {
-    using UnityEngine;
     [CreateAssetMenu(menuName = "Labyrinth/TileType")]
     public class TileType : ScriptableObject
     {
         public string displayName;
-        public TileConnection baseConnections;
+        public Direction baseConnections;
         public GameObject prefabVisualisation;
     }
 }

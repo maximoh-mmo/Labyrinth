@@ -1,19 +1,18 @@
-﻿using System;
-using Grid;
-using Unity.VisualScripting;
-using UnityEngine;
-using UnityEngine.InputSystem;
+﻿using Maze;
 
 namespace Game
 {
+    using UnityEngine;
+    using UnityEngine.InputSystem;
+
     public class Controller : MonoBehaviour
     {
         private InputAction _shiftUp, _shiftDown, _shiftLeft, _shiftRight;
-        private LabyrinthGrid _grid;
+        private GridVisualization _gridVisualization;
 
         private void Start()
         {
-            _grid = GetComponent<LabyrinthGrid>();
+            _gridVisualization = GetComponent<GridVisualization>();
         }
 
         private void OnEnable()
@@ -50,19 +49,19 @@ namespace Game
         
         private void Update()
         {
-            if (!_grid) return;
+            if (!_gridVisualization) return;
             {
                 if (_shiftUp != null && _shiftUp.WasPerformedThisFrame())
-                    _grid.InsertTile(new GridPosition(3, _grid.GridSize - 1), ShiftDirection.Up);
+                    _gridVisualization.InsertTile(new Position(3, _gridVisualization.GridSize - 1), Direction.Up);
 
                 if (_shiftDown != null && _shiftDown.WasPerformedThisFrame())
-                    _grid.InsertTile(new GridPosition(3, 0), ShiftDirection.Down);
+                    _gridVisualization.InsertTile(new Position(3, 0), Direction.Down);
 
                 if (_shiftLeft != null && _shiftLeft.WasPerformedThisFrame())
-                    _grid.InsertTile(new GridPosition(0, 3), ShiftDirection.Left);
+                    _gridVisualization.InsertTile(new Position(0, 3), Direction.Left);
 
                 if (_shiftRight != null && _shiftRight.WasPerformedThisFrame())
-                    _grid.InsertTile(new GridPosition(_grid.GridSize - 1, 3), ShiftDirection.Right);
+                    _gridVisualization.InsertTile(new Position(_gridVisualization.GridSize - 1, 3), Direction.Right);
             }
             
         }
